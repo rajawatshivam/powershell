@@ -1,7 +1,7 @@
 $MyEmail =  "Sender Name <sender's email id>"
 $SMTP = "smtp server name"
 $To ="SHIVAM RAJAWAT [C] <EMAIL ID HERE>","Tarun <Tarun's email id>"
-$password = cat D:\Users\O46658\Desktop\shivam_automation_notebooks\pss.txt | convertto-securestring
+$password = cat D:\Users\Desktop\shivam_automation_notebooks\pss.txt | convertto-securestring
 $Creds = new-object -typename System.Management.Automation.PSCredential -argumentlist $MyEmail, $password
 
 
@@ -59,7 +59,7 @@ $Creds = new-object -typename System.Management.Automation.PSCredential -argumen
 	Send-MailMessage -To $To -From $MyEmail -Subject $Subject -BodyAsHTML $Body -SmtpServer $SMTP -Credential $Creds -Port 25 -DeliveryNotificationOption never
 	}
  else {
-	$f= Get-Content D:\Usersc\Desktop\shivam_automation_notebooks\abc\$item.csv | Measure-Object -line
+	$f= Get-Content D:\Users\Desktop\shivam_automation_notebooks\abc\$item.csv | Measure-Object -line
 	$l =$f.lines-1
 	$name = $item.ToUpper().replace($dt,'')
 	$Body = "Hi All,<br><br>
