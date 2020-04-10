@@ -1,4 +1,4 @@
-	$AnalysisServiceAseanDb="ASEAN - NSR"
+	$AnalysisServiceAseanDb="database name"
 	
 	$AnalysisServiceAsean="Azure server name"
 	$dt = Get-Date -f yyyyMMdd
